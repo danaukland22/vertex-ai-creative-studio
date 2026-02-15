@@ -85,6 +85,7 @@ class UserInfo(BaseModel):
 
 
 # FastAPI server with Mesop
+
 router = APIRouter()
 app.include_router(router)
 
@@ -307,4 +308,5 @@ if __name__ == "__main__":
         reload_includes=["*.py", "*.js"],
         timeout_graceful_shutdown=0,
         proxy_headers=True,
+        forwarded_allow_ips="*",
     )
